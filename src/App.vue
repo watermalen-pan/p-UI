@@ -1,28 +1,33 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="row">
+      <Pbutton  @click='change' disabled>按钮 </Pbutton >
+      <Pbutton type='primary' disabled >按钮</Pbutton >
+      <Pbutton type='success' disabled>按钮</Pbutton >
+      <Pbutton type='info' disabled>按钮</Pbutton >
+      <Pbutton type='warning' disabled>按钮</Pbutton >
+      <Pbutton type='danger' disabled>按钮</Pbutton >
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Pbutton from './components/button.vue'
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Pbutton
+  },
+  methods: {
+    change (e) {
+      console.log(e)
+    }
   }
 }
 </script>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+.row {
+  margin: 10px;
 }
 </style>
